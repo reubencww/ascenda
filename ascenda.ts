@@ -57,9 +57,7 @@ export class OfferService {
 
     filteredOffers.sort(this.sortOffersByDistAndScore)
 
-    const bestOffers = this.get2BestOffer(filteredOffers)
-
-    return bestOffers
+    return this.get2BestOffer(filteredOffers)
   }
 
   private filterInvalidOffers(offer: Offer, checkin: string): boolean {
